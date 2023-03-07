@@ -28,7 +28,7 @@ body, html {
         border-radius: 5px;
         width: 90%;
         font-size: large;
-        border-color: black;
+        border: 1px solid lightgray;
 }
 
 #info {
