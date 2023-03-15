@@ -1,0 +1,46 @@
+.col-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+
+
+.img {
+    width: 80%;
+    z-index: 0;
+}
+
+
+h1 {
+    z-index: 1;
+    font-size: 1.2em;
+
+}
+
+.jumbotron {
+    background-image: url("/cover/pizza.png");
+    height: 346px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.text {
+    width: 100%;
+    text-align: center;
+    height: 20%;
+    background-color: #DDDDDD;
+    opacity: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    color: black;
+}
+
+.card {
+    width: 80%;
+}
