@@ -7,9 +7,8 @@
 
 <body>
     <h1 class="learning">Im learning in Codeup</h1>
-    <h1>Another h1</h1>
-    <h1>A third h1</h1>
     <p id="paragraph">These are the subjects that we are learning</p>
+    <p>Another paragraph</p>
     <ul id="list">List</ul>
     <li class="codeup">Javascript</li>
     <li class="codeup">Jav</li>
@@ -33,5 +32,23 @@
      let heading =$('h1').html()
     alert(heading)
     console.log(heading)
+
+    $('h1').click(function (){
+        $(this).css('background-color','purple')
+    })
+    $('p').click(function (){
+        $(this).css('font-size','20px')
+    })
+    $('li').hover(
+        function() {
+            $(this).css('color', 'red');
+        },
+        function() {
+            $(this).css('color', 'black');
+        }
+    );
+
+
+
 </script>
 </html>
