@@ -5,6 +5,11 @@
     <title>Title</title>
 </head>
 <body>
+    <style>
+        .invisible {
+            visibilty:hidden
+        }
+    </style>
 
     <p>Cryptids of Cornwall:</p>
 
@@ -40,16 +45,44 @@
         <dt>Beast of Bodmin</dt>
         <dd class="invisible">A large feline inhabiting Bodmin Moor.</dd>
     </dl>
-<a id="onOff"href="#">On and Off</a>
+
+<!--    <h3 id="national-parks-heading">National Parks</h3>-->
+<!--    <ul id="park">-->
+<!--        <li>Arches</li>-->
+<!--        <li>Badlands</li>-->
+<!--        <li>Carlsbad Caverns</li>-->
+<!--        <li>Denali</li>-->
+<!--        <li>Everglades</li>-->
+<!--    </ul>-->
+<!--    <h3>State Parks of Texas</h3>-->
+<!--    <ul id="another-park">-->
+<!--        <li>Abilene</li>-->
+<!--        <li>Big Bend</li>-->
+<!--        <li>Choke Canyon</li>-->
+<!--        <li>Davis Mountains</li>-->
+<!--        <li>Enchanted Rock</li>-->
+<!--    </ul>-->
+<!--    <h3 id="parks-heading">National Parks</h3>-->
+<!--    <ul id="a-3rd-park">-->
+<!--        <li>Arches</li>-->
+<!--        <li>Badlands</li>-->
+<!--        <li>Carlsbad Caverns</li>-->
+<!--        <li>Denali</li>-->
+<!--        <li>Everglades</li>-->
+<!--    </ul>-->
+<!--    <button class="button1">Button</button>-->
+
+    <button id="click">On and Off</button>
 
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script type="text/javascript">
-    $('.invisible').css('visibility','hidden')
-    $('#onOff').click(function () {
-        $('dd').toggle('invisible')
-        $(this).css('color','green')
+    // $('.invisible').css('visibility','hidden')
+
+    $('#click').click(function () {
+        $('dd').toggleClass('invisible')
+        // $(this).css('color','green')
 
     })
 
@@ -62,7 +95,21 @@
         }
     );
 
+    // $('.button1').click( function (){
+    //     $('ul').each(function (index){
+    //         // $('li').last().css('background-color', 'yellow')
+    //         $('ul')[1].children().last().css('background-color', 'yellow')
+    //     })
+    // })
 
+
+    // $('.button1').click( function (){
+    //     $('ul').each(function (){
+    //         $('ul').children(function () {
+    //             $('li').last().css('background-color','yellow')
+    //         })
+    //     })
+    // })
 
 </script>
 </html>
