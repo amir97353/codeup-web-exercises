@@ -5,14 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-<script type="text/javascript">
-    $('.invisible').css('visibility','hidden')
-    $('.onOff').onclick(function () {
-        $('dd').toggleClass('invisible')
-    })
 
-</script>
     <p>Cryptids of Cornwall:</p>
 
     <dl>
@@ -47,8 +40,29 @@
         <dt>Beast of Bodmin</dt>
         <dd class="invisible">A large feline inhabiting Bodmin Moor.</dd>
     </dl>
-<a class="onOff"href="#">On and Off</a>
+<a id="onOff"href="#">On and Off</a>
 
-    </button>
+
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script type="text/javascript">
+    $('.invisible').css('visibility','hidden')
+    $('#onOff').click(function () {
+        $('dd').toggle('invisible')
+        $(this).css('color','green')
+
+    })
+
+    $('dt').hover(
+        function() {
+            $(this).css('color', 'red');
+        },
+        function() {
+            $(this).css('color', 'black');
+        }
+    );
+
+
+
+</script>
 </html>
