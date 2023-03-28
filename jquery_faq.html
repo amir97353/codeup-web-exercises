@@ -5,74 +5,74 @@
     <title>Title</title>
 </head>
 <body>
-    <style>
-        .invisible {
-            visibilty:hidden
-        }
-    </style>
+<style>
+    .invisible {
+        visibilty: hidden
+    }
+</style>
 
-    <p>Cryptids of Cornwall:</p>
+<p>Cryptids of Cornwall:</p>
 
-    <dl>
-        <dt>Beast of Bodmin</dt>
-        <dd class="invisible">A large feline inhabiting Bodmin Moor.</dd>
+<dl>
+    <dt>Beast of Bodmin</dt>
+    <dd class="invisible">A large feline inhabiting Bodmin Moor.</dd>
 
-        <dt>Morgawr</dt>
-        <dd class="invisible">A sea serpent.</dd>
+    <dt>Morgawr</dt>
+    <dd class="invisible">A sea serpent.</dd>
 
-        <dt>Owlman</dt>
-        <dd class="invisible">A giant owl-like creature.</dd>
+    <dt>Owlman</dt>
+    <dd class="invisible">A giant owl-like creature.</dd>
 
-        <dt>Beast of Bodmin</dt>
-        <dd class="invisible">A large feline inhabiting Bodmin Moor.</dd>
+    <dt>Beast of Bodmin</dt>
+    <dd class="invisible">A large feline inhabiting Bodmin Moor.</dd>
 
-        <dt>Morgawr</dt>
-        <dd class="invisible">A sea serpent.</dd>
+    <dt>Morgawr</dt>
+    <dd class="invisible">A sea serpent.</dd>
 
-        <dt>Owlman</dt>
-        <dd class="invisible">A giant owl-like creature.</dd>
-        <dt>Beast of Bodmin</dt>
+    <dt>Owlman</dt>
+    <dd class="invisible">A giant owl-like creature.</dd>
+    <dt>Beast of Bodmin</dt>
 
-        <dt>Morgawr</dt>
-        <dd class="invisible">A sea serpent.</dd>
+    <dt>Morgawr</dt>
+    <dd class="invisible">A sea serpent.</dd>
 
-        <dt>Owlman</dt>
-        <dd class="invisible">A giant owl-like creature.</dd>
+    <dt>Owlman</dt>
+    <dd class="invisible">A giant owl-like creature.</dd>
 
-        <dt>Beast of Bodmin</dt>
-        <dd class="invisible">A large feline inhabiting Bodmin Moor.</dd>
+    <dt>Beast of Bodmin</dt>
+    <dd class="invisible">A large feline inhabiting Bodmin Moor.</dd>
 
-        <dt>Beast of Bodmin</dt>
-        <dd class="invisible">A large feline inhabiting Bodmin Moor.</dd>
-    </dl>
+    <dt>Beast of Bodmin</dt>
+    <dd class="invisible">A large feline inhabiting Bodmin Moor.</dd>
+</dl>
 
-<!--    <h3 id="national-parks-heading">National Parks</h3>-->
-<!--    <ul id="park">-->
-<!--        <li>Arches</li>-->
-<!--        <li>Badlands</li>-->
-<!--        <li>Carlsbad Caverns</li>-->
-<!--        <li>Denali</li>-->
-<!--        <li>Everglades</li>-->
-<!--    </ul>-->
-<!--    <h3>State Parks of Texas</h3>-->
-<!--    <ul id="another-park">-->
-<!--        <li>Abilene</li>-->
-<!--        <li>Big Bend</li>-->
-<!--        <li>Choke Canyon</li>-->
-<!--        <li>Davis Mountains</li>-->
-<!--        <li>Enchanted Rock</li>-->
-<!--    </ul>-->
-<!--    <h3 id="parks-heading">National Parks</h3>-->
-<!--    <ul id="a-3rd-park">-->
-<!--        <li>Arches</li>-->
-<!--        <li>Badlands</li>-->
-<!--        <li>Carlsbad Caverns</li>-->
-<!--        <li>Denali</li>-->
-<!--        <li>Everglades</li>-->
-<!--    </ul>-->
-<!--    <button class="button1">Button</button>-->
+<h3 id="national-parks-heading">National Parks</h3>
+<ul id="park">
+    <li>Arches</li>
+    <li>Badlands</li>
+    <li>Carlsbad Caverns</li>
+    <li>Denali</li>
+    <li>Everglades</li>
+</ul>
+<h3>State Parks of Texas</h3>
+<ul id="another-park">
+    <li>Abilene</li>
+    <li>Big Bend</li>
+    <li>Choke Canyon</li>
+    <li>Davis Mountains</li>
+    <li>Enchanted Rock</li>
+</ul>
+<h3 id="parks-heading">National Parks</h3>
+<ul id="a-3rd-park">
+    <li>Arches</li>
+    <li>Badlands</li>
+    <li>Carlsbad Caverns</li>
+    <li>Denali</li>
+    <li>Everglades</li>
+</ul>
+<button class="button1">Button</button>
 
-    <button id="click">On and Off</button>
+<button class="button2">Button 2</button>
 
 
 </body>
@@ -80,36 +80,40 @@
 <script type="text/javascript">
     // $('.invisible').css('visibility','hidden')
 
-    $('#click').click(function () {
+    $('.button2').click(function () {
         $('dd').toggleClass('invisible')
-        // $(this).css('color','green')
+        $(this).css('color', 'green')
 
     })
 
     $('dt').hover(
-        function() {
+        function () {
             $(this).css('color', 'red');
         },
-        function() {
+        function () {
             $(this).css('color', 'black');
         }
     );
 
-    // $('.button1').click( function (){
-    //     $('ul').each(function (index){
-    //         // $('li').last().css('background-color', 'yellow')
-    //         $('ul')[1].children().last().css('background-color', 'yellow')
-    //     })
-    // })
+    $('.button1').click(function () {
+        $('ul').each(function () {
+            // // $('#a-3rd-park').last().css('background-color', 'yellow')
+            // $('#park').children().last().css('background-color', 'yellow')
+            // $('#another-park').children().last().css('background-color', 'yellow')
+            // $('#a-3rd-park').children().last().css('background-color', 'yellow')
+            $(this).children().last().css('background', 'yellow');
+        })
+    })
+
+    $('h3').click(function () {
+        $('li').css('font-weight', 'bold')
+    })
 
 
-    // $('.button1').click( function (){
-    //     $('ul').each(function (){
-    //         $('ul').children(function () {
-    //             $('li').last().css('background-color','yellow')
-    //         })
-    //     })
-    // })
-
+    $('li').each(function () {
+       $('li').click( function () {
+                $('li:first-child').css('color', 'blue')
+        })
+    })
 </script>
 </html>
