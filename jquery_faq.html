@@ -106,14 +106,18 @@
     })
 
     $('h3').click(function () {
-        $('li').css('font-weight', 'bold')
+        $('this').next().css('font-weight', 'bold')
     })
 
 
-    $('li').each(function () {
-       $('li').click( function () {
-                $('li:first-child').css('color', 'blue')
-        })
+    // $('li').each(function () {
+    //    $('li').click( function () {
+    //             $('li:first-child').css('color', 'blue')
+    //     })
+    // })
+
+    $('li').click( function(){
+        $(this).parent().children().first().css('color','blue')
     })
 </script>
 </html>
