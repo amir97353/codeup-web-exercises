@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Mapbox Map</title>
+    <!-- Mapbox JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+    <!-- Mapbox CSS -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet'/><style>
+    #map {
+        /* the width and height may be set to any size */
+        width: 100%;
+        height: 700px;
+    }
+</style>
+</head>
+<body>
+
+<h1>My First Mapbox Map!</h1>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder.js" ></script>
+
+<!-- Custom JS -->
+
+<script>
+
+ let placesToEat =  [
+     {
+        "restaurants":"Pappadeaux",
+         "Coordinates": [" -95.35938287422074", "29.7602999471777"]
+     }
+    ,
+     {
+         "restaurants":"Pappa",
+         "Coordinates": [ "-95.36748532877176" ,"29.75462690757553"]
+     }
+    ]
+
+ mapboxgl.accessToken = MAPBOX_TOKEN;
+ let map = new mapboxgl.Map({
+     container: 'map', // container ID
+     style: 'mapbox://styles/mapbox/streets-v11', // style URL
+     zoom: 10, // starting zoom
+     center: [-95.358421, 29.749907] // [lng, lat]
+ });
+
+
+placesToEat.forEach(place => {
+    console.log(place.Coordinates[0])
+    let marker=  new mapboxgl.Marker()
+        .setLngLat([ place.Coordinates[0], place.Coordinates[1] ])
+        .addTo(map);
+
+
+
+    let popup= new mapboxgl.Popup()
+        .setLngLat([place.Coordinates[0], place.Coordinates[1]])
+         .setHTML("<p>"+place.restaurants  +"</p>")
+         .addTo(map)
+     marker.setPopup(popup)
+})
+
+
+
+    // adding a marker
+    // let marker = new mapboxgl.Marker()
+    //     .setLngLat([ -95.2960, 29.7004 ])
+    //     .addTo(map);
+
+    //pop-up
+
+    //   let popup =  new mapboxgl.Popup()
+    //         .setLngLat([-95.2960, 29.7004])
+    //         .setHTML("<p>Boudreaux's</p>")
+    //         .addTo(map)
+    // marker.setPopup(popup)
+    // marker.addEventListener("click", popup())
+    // marker.setPopup(popup)
+// let currentLocation = geocode('Allen',MAPBOX_TOKEN)
+//     currentLocation.then(function (){
+//
+//     })
+
+
+</script>
+</body>
+</html>
