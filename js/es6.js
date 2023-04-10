@@ -31,6 +31,7 @@ const users = [
 
 // TODO: fill in your name and email and add some programming languages you know
 // to the languages array
+
 // TODO: replace the `var` keyword with `const`, then try to reassign a variable
 // declared as `const`
 const name = 'Amir';
@@ -38,11 +39,11 @@ const email = 'joeshmo123@yahoo.com';
 const languages = ['java','javascript','Php','C++'];
 
 // TODO: rewrite the object literal using object property shorthand
-// users.push({
-//   name,
-//   email,
-//   languages,
-// });
+users.push({
+  name,
+  email,
+  languages,
+});
 
 const  user = {
   name,
@@ -87,7 +88,7 @@ let list = '<ul>';
 //TODO: rewrite the following loop to use a for..of loop
 // developers.forEach(function (developer) {
 
-  for (developer of developers) {
+  for (let developer of developers) {
     // TODO: rewrite the assignment below to use template strings
     list += `<li>${developer}</li>`;
     list += '</ul>';
