@@ -37,39 +37,47 @@ const users = [
 ];
 // console.log (users[0])
 
-let stuff =users.filter(user => {
-    if( user.languages[2] = true){
-        return user
-    }
-})
+let threelangs =users.filter(user =>
+    user.languages.length >= 3)
+
 
 // console.log(stuff)
 
-let email = users.map(user => {
-    // console.log([user.email])
-})
+let email = users.map(user => user.email)
 // console.log(email)
 
 
 const totalId = users.reduce((total, user) => {
 
-    return total + user.id;
+    return total + user.yearsOfExperience;
 }, 0);
 
-// console.log(totalId)
+console.log(totalId)
 
 average = totalId/ users.length
 // console.log(average)
 
- let mail = users.forEach(user => {
-     return user.email
+let mail = users.map(user => {
+    return user.email.split('')
+})
 
- })
-mail.reduce((acc, curr) => {
+// console.log(mail)
+// mail.forEach(email => {
+//     console.log(email.split(" ,"))
+// })
+
+let longestemail = mail.reduce((acc, curr) => {
     if(acc.length > curr.length) {
-        console.log(acc)
+        return acc
     }else {
         return curr
     }
 }, '');
 
+// console.log(longestemail.join(''))
+
+
+let instructors = users.reduce((string,user) => {
+    string += user.name + " ,"
+    return string
+},'')
